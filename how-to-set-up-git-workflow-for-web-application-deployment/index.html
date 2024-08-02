@@ -18,7 +18,7 @@
   
   
   
-  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.96bf42d2a4d108deab67f4759c05aca91aae6c878600795e448df5c6604d9649.css">
+  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.9ac49474623bb7e28a7fc4ec642d036b6fbcb0ec62cfd7617c51ba7cb654cb74.css">
   <link rel="apple-touch-icon" sizes="180x180" href="https://bensonshaji.dev/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://bensonshaji.dev/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://bensonshaji.dev/assets/favicon/favicon-16x16.png">
@@ -88,8 +88,6 @@
         <span class="read-time">4 min read</span>
       </div>
 
-      
-
 
 
 
@@ -109,16 +107,20 @@
         draggable="false" alt="">
 </picture>
 
+<div class="row">
+        <div class="col-md-8">
+          <h2 id="what-is-git">What is Git?</h2>
 <p>Git is popular tool among developers. It’s mainly used to track changes in code through out the development process. But there is a hidden feature in it called Git hooks, through which we can run scripts when a specific event is triggered in a Git repository. One of these events is called Post-Receive.</p>
+<h2 id="what-is-post-receive-hook">What is Post-Receive Hook?</h2>
 <p>Post-Receive is an event which is triggered when there is a successful push to repository. This is useful in scenarios where an action has to be performed when a user commit s to the repository. We trigger this action by creating Post-Receive hook file in the repository.</p>
-<h1 id="prerequisites">Prerequisites</h1>
+<h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li>SSH access to your server with super user (sudo) access</li>
 <li>Git is installed on the server</li>
 <li>Nginx server blocks / Apache virtual hosts enabled (optional - to verify the deployed website)</li>
 </ol>
 <p><em>Refer tutorial on how to setup Nginx server blocks (Virtual Hosts) - <a href="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/">Here</a></em></p>
-<h1 id="create-a-bare-git-repository">Create a Bare Git repository</h1>
+<h2 id="create-a-bare-git-repository">Create a Bare Git repository</h2>
 <p>Bare Git repository is a centralised repository where developers commit and fetch changes from it. In other words the repositories that you have created on Github are bare repositories and repository you have cloned on to your computer is a working directory for code development. TL;DR You can’t use bare Git repository for code development</p>
 <p>When your web application is ready to be deployed to cloud, Login to your server via SSH and create the following directories to work with.</p>
 <ul>
@@ -139,7 +141,7 @@
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init --bare /repository/example.com.git
 </span></span></code></pre></div><p><em><strong>Note:</strong> Ensure you are not creating these directories in default Nginx or Apache web root directories. As it would expose entire repository to public, if directory index listings are enabled.</em></p>
-<h1 id="create-a-post-receive-hook">Create a Post-Receive hook</h1>
+<h2 id="create-a-post-receive-hook">Create a Post-Receive hook</h2>
 <ul>
 <li>Create a file named post-receive in the following path and make it executable</li>
 </ul>
@@ -164,7 +166,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">fi</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">done</span>
 </span></span></code></pre></div><p>Post-Receive script is triggered when a user makes a successful push to master branch on this server. The script checks the branch which the Git head is pointing into. If it matches the branch defined in the variable <code>$BRANCH</code> (I.e, master), Then it checks out a latest copy to the <code>$WEB_DIR</code> directory.</p>
-<h1 id="add-a-new-remote-in-local-workspace">Add a new remote in Local Workspace</h1>
+<h2 id="add-a-new-remote-in-local-workspace">Add a new remote in Local Workspace</h2>
 <p>Let us log out from the server and <code>cd</code> into to the local workspace (website directory)</p>
 <p><em><strong>Warning:</strong> Don’t include any source code that contains private information that you do not want publish into the Git repository.</em></p>
 <ul>
@@ -176,7 +178,7 @@
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add production &lt;user&gt;@&lt;server&gt;:/repository/example.com.git
 </span></span></code></pre></div><p><em><strong>Note:</strong> Replace <code>&lt;user&gt;</code> and <code>&lt;server&gt;</code> with your ssh username and server IP / FQDN</em></p>
-<h1 id="deploy-your-web-app">Deploy your Web App</h1>
+<h2 id="deploy-your-web-app">Deploy your Web App</h2>
 <ul>
 <li>We have done configuring our repository and development workspace to publish the site by running the command</li>
 </ul>
@@ -194,6 +196,28 @@
 </span></span><span style="display:flex;"><span>   b46d132..0141515  master -&gt; master
 </span></span></code></pre></div><p>Voila! You have successfully setup Git workflow to deploy websites on Git push. You should see your static website or app deployed to the Nginx Web Root directory If you have followed this tutorial.</p>
 
+        </div>
+        <div class="col-md-4">
+          
+          <aside class="toc">
+            <div class="content">
+              <h2>Contents</h2>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-git">What is Git?</a></li>
+    <li><a href="#what-is-post-receive-hook">What is Post-Receive Hook?</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#create-a-bare-git-repository">Create a Bare Git repository</a></li>
+    <li><a href="#create-a-post-receive-hook">Create a Post-Receive hook</a></li>
+    <li><a href="#add-a-new-remote-in-local-workspace">Add a new remote in Local Workspace</a></li>
+    <li><a href="#deploy-your-web-app">Deploy your Web App</a></li>
+  </ul>
+</nav>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
       <h2 class="align-center lined-heading">Tags</h2>
       <div class="hero-tags">
         <a class="tag" href="https://bensonshaji.dev/tags/git/">GIT</a>

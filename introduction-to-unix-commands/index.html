@@ -18,7 +18,7 @@
   
   
   
-  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.96bf42d2a4d108deab67f4759c05aca91aae6c878600795e448df5c6604d9649.css">
+  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.9ac49474623bb7e28a7fc4ec642d036b6fbcb0ec62cfd7617c51ba7cb654cb74.css">
   <link rel="apple-touch-icon" sizes="180x180" href="https://bensonshaji.dev/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://bensonshaji.dev/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://bensonshaji.dev/assets/favicon/favicon-16x16.png">
@@ -89,8 +89,6 @@
         <span class="read-time">5 min read</span>
       </div>
 
-      
-
 
 
 
@@ -110,6 +108,9 @@
         draggable="false" alt="">
 </picture>
 
+<div class="row">
+        <div class="col-md-8">
+          <h2 id="introduction">Introduction</h2>
 <p>Commands were the only way of interacting with computers before GUI based operating systems were introduced. Now, everyone is pretty comfortable with trusty mouse to perform series of clicks and get things done. This is indeed intuitive and welcoming for beginners. However commands and terminals are preferred ways of doing things in software development. Why you may ask? It’s easier to automate certain things such as building projects, deploying code, and monitoring servers via command executions in terminals.</p>
 <p>In reality commands via terminals could do a lot more than what we would be discussing in this post. I enjoy executing commands written in scripts, and when executed it automates my workflow with a single command.</p>
 <p>ex: <code>make prodBuild</code> is a command that I use in my Hugo Project which runs following actions in series of commands to publish a post to <a href="https://bensonshaji.dev/posts">https://bensonshaji.dev/posts</a>.</p>
@@ -125,7 +126,7 @@
 <p>Working in a Linux terminal is the goto way for any developer who wants to get things done quickly.</p>
 </blockquote>
 <p>In a series of post, We will be discussing the most commonly used Linux commands. Throughout this series I would be executing these commands on MacOS, However it should work on any Linux Distribution. Windows 10/11 users can download Ubuntu on WSL app from Microsoft store to learn along the way.</p>
-<h1 id="working-with-directories">Working with Directories</h1>
+<h2 id="working-with-directories">Working with Directories</h2>
 <p>Every operating system has the ability to organise content via files and folders. I am sure you are aware of it and know how to use it with GUI. It’s easy to click your way through to get into any directory. However, In terminal you need to use a program called  <code>cd</code> meaning <em>change directory</em>.</p>
 <p>By default when you open terminal you will be in Home directory of the current user. In MacOS it is <code>/Users/&lt;username&gt;/</code>. For other *nix distributions you could check your current working directory by running command <code>pwd</code> meaning <em>print working directory</em>. Hurray! That’s your first command ran on a terminal. It prints the current working directory.</p>
 <p>Now let us run a few more commands with various options passed to the program.</p>
@@ -149,7 +150,7 @@
 </span></span></code></pre></div><blockquote>
 <p>Prints the current working directory</p>
 </blockquote>
-<h1 id="listing-files-in-a-directory">Listing files in a Directory</h1>
+<h2 id="listing-files-in-a-directory">Listing files in a Directory</h2>
 <p>Now that we have learnt how to navigate between directories, it is time to see how to list files in a folder. It is done by running a program <code>ls</code> meaning <em>list directory contents</em></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls
 </span></span></code></pre></div><blockquote>
@@ -197,7 +198,7 @@ ex: Instead of showing 3497 in size column it shows 3.4K, indicating the file is
 </span></span></code></pre></div><blockquote>
 <p>Lists all files whose names begin with characters ‘a’ through ‘g’</p>
 </blockquote>
-<h1 id="create-directories">Create directories</h1>
+<h2 id="create-directories">Create directories</h2>
 <p>We now have learnt how to list files and folder in a directory, It’s time to create one in terminal. And it’s as simple as running the program ‘mkdir’ and passing a folder name to it.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ mkdir Finance
 </span></span></code></pre></div><blockquote>
@@ -210,6 +211,25 @@ ex: Instead of showing 3497 in size column it shows 3.4K, indicating the file is
 <p>With these commands you should be able to navigate between directories, list contents of a directory and even create one from the terminal.</p>
 <p>In the upcoming post we will take a step further and work with files from the terminal.</p>
 
+        </div>
+        <div class="col-md-4">
+          
+          <aside class="toc">
+            <div class="content">
+              <h2>Contents</h2>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#working-with-directories">Working with Directories</a></li>
+    <li><a href="#listing-files-in-a-directory">Listing files in a Directory</a></li>
+    <li><a href="#create-directories">Create directories</a></li>
+  </ul>
+</nav>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
       <h2 class="align-center lined-heading">Tags</h2>
       <div class="hero-tags">
         <a class="tag" href="https://bensonshaji.dev/tags/linux/">LINUX</a>
