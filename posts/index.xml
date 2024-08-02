@@ -13,7 +13,7 @@
       <link>https://bensonshaji.dev/vim-cheatsheet/</link>
       <pubDate>Mon, 01 Aug 2022 22:04:03 +0530</pubDate>
       <guid>https://bensonshaji.dev/vim-cheatsheet/</guid>
-      <description>Vim is a fantastic code editor and is a popular choice among hardcore developers. Its my favourite choice when it comes to making quick code changes in terminal. Vim has a huge learning curve with its long list commands to memorize. Here is a cheatsheet with my most used vim commands in my development process.</description>
+      <description>Vim is a fantastic code editor and is a popular choice among hardcore developers. It&amp;rsquo;s my favourite choice when it comes to making quick code changes in terminal. Vim has a huge learning curve with its long list commands to memorise. Here is a cheatsheet with my most used vim commands in my development process.</description>
     </item>
     <item>
       <title>What Is Web 3.0?</title>
@@ -28,6 +28,13 @@
       <pubDate>Sun, 31 Jul 2022 21:20:50 +0530</pubDate>
       <guid>https://bensonshaji.dev/what-is-containerization/</guid>
       <description>Containerization is a process of packaging software application with its operating environment as a bundle through Virtualization. The containers running through virtualization are hardware agnostic and portable.</description>
+    </item>
+    <item>
+      <title>What Is Machine Learning?</title>
+      <link>https://bensonshaji.dev/what-is-machine-learning/</link>
+      <pubDate>Sat, 30 Jul 2022 22:57:49 +0530</pubDate>
+      <guid>https://bensonshaji.dev/what-is-machine-learning/</guid>
+      <description>Machine Learning is a topic that is making headlines in the IT industry. We hear it many times and leave it unnoticed. This article briefly explains what Machine Learning is and how it’s taking over the IT into a new direction.</description>
     </item>
     <item>
       <title>How To Set Up Git Workflow For Web Application Deployment</title>

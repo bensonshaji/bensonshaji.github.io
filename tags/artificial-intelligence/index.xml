@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Artificial-Intelligence on </title>
+    <link>https://bensonshaji.dev/tags/artificial-intelligence/</link>
+    <description>Recent content in Artificial-Intelligence on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Jul 2022 22:57:49 +0530</lastBuildDate>
+    <atom:link href="https://bensonshaji.dev/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Machine Learning?</title>
+      <link>https://bensonshaji.dev/what-is-machine-learning/</link>
+      <pubDate>Sat, 30 Jul 2022 22:57:49 +0530</pubDate>
+      <guid>https://bensonshaji.dev/what-is-machine-learning/</guid>
+      <description>Machine Learning is a topic that is making headlines in the IT industry. We hear it many times and leave it unnoticed. This article briefly explains what Machine Learning is and how it’s taking over the IT into a new direction.</description>
+    </item>
+  </channel>
+</rss>
