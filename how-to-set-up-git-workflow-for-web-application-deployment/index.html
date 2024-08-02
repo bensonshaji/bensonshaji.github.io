@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>
+    
+    How To Set Up Git Workflow For Web Application Deployment
+    
+  </title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.130.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Benson Shaji" />
+  
+  <meta name="description" content="">
+  
+  <link rel="canonical" href="https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/" />
+  
+  
+  
+  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.468284e2eaa8e65d8e1ef62d82524e8753044f0cbb11857323dce42a167c654d.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://bensonshaji.dev/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bensonshaji.dev/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bensonshaji.dev/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://bensonshaji.dev/assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <meta property="og:url" content="https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/">
+  <meta property="og:title" content="How To Set Up Git Workflow For Web Application Deployment">
+  <meta property="og:description" content="Git is popular tool among developers. It’s mainly used to track changes in code through out the development process. But there is a hidden feature in it called Git hooks, through which we can run scripts when a specific event is triggered in a Git repository. One of these events is called Post-Receive.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-20T12:56:06+05:30">
+    <meta property="article:modified_time" content="2022-07-20T12:56:06+05:30">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Deployment">
+    <meta property="article:tag" content="Workflow">
+    <meta property="article:tag" content="Cloud">
+    <meta property="article:tag" content="Server">
+    <meta property="og:image" content="https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/yancy-min-842ofHC6MaI-unsplash-cover.jpeg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/yancy-min-842ofHC6MaI-unsplash-cover.jpeg">
+  <meta name="twitter:title" content="How To Set Up Git Workflow For Web Application Deployment">
+  <meta name="twitter:description" content="Git is popular tool among developers. It’s mainly used to track changes in code through out the development process. But there is a hidden feature in it called Git hooks, through which we can run scripts when a specific event is triggered in a Git repository. One of these events is called Post-Receive.">
+
+  
+</head>
+
+<body data-theme="light">
+  <script>
+    if (localStorage.getItem("bensonshaji-data-theme") != null) {
+      document.getElementsByTagName("body")[0].setAttribute("data-theme", localStorage.getItem("bensonshaji-data-theme"))
+    }
+  </script><header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <nav>
+          <a href="https://bensonshaji.dev/">Home</a>
+          <a href="https://bensonshaji.dev/posts">Posts</a>
+          <a href="https://bensonshaji.dev/tags">Tags</a>
+        </nav>
+      </div>
+      <div class="col-md-4 align-center">
+        <a href="https://bensonshaji.dev/">
+          <div class="logo"></div>
+        </a>
+      </div>
+      <div class="col-md-4 align-right">
+        <nav>
+          <a href="https://bensonshaji.dev/sitemap.xml">Sitemap</a>
+          <a href="https://bensonshaji.dev/index.xml">RSS</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><main class="app-container">
+    
+<main class="hero-post">
+  <div class="container">
+    <div class="col-md-12">
+
+      <h1 class="hero-title">How To Set Up Git Workflow For Web Application Deployment</h1>
+      <div class="hero-post-info">
+        <span class="date">Jul 20, 2022</span>
+        <span class="read-time">4 min read</span>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="hero-image">
+    <img src="https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/yancy-min-842ofHC6MaI-unsplash-cover_hu309c37d50846c7b045ac9cfd5834baf8_2283649_900x450_fill_q75_box_center.jpeg"
+        srcset="https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/yancy-min-842ofHC6MaI-unsplash-cover_hu309c37d50846c7b045ac9cfd5834baf8_2283649_900x450_fill_q75_box_center.jpeg 900w, https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/yancy-min-842ofHC6MaI-unsplash-cover_hu309c37d50846c7b045ac9cfd5834baf8_2283649_1200x550_fill_q75_box_center.jpeg 1200w, https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/yancy-min-842ofHC6MaI-unsplash-cover_hu309c37d50846c7b045ac9cfd5834baf8_2283649_1600x850_fill_q75_box_center.jpeg 1600w"
+        draggable="false" alt="">
+</picture>
+
+<p>Git is popular tool among developers. It’s mainly used to track changes in code through out the development process. But there is a hidden feature in it called Git hooks, through which we can run scripts when a specific event is triggered in a Git repository. One of these events is called Post-Receive.</p>
+<p>Post-Receive is an event which is triggered when there is a successful push to repository. This is useful in scenarios where an action has to be performed when a user commit s to the repository. We trigger this action by creating Post-Receive hook file in the repository.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<ol>
+<li>SSH access to your server with super user (sudo) access</li>
+<li>Git is installed on the server</li>
+<li>Nginx server blocks / Apache virtual hosts enabled (optional - to verify the deployed website)</li>
+</ol>
+<p><em>Refer tutorial on how to setup Nginx server blocks (Virtual Hosts) - <a href="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/">Here</a></em></p>
+<h1 id="create-a-bare-git-repository">Create a Bare Git repository</h1>
+<p>Bare Git repository is a centralised repository where developers commit and fetch changes from it. In other words the repositories that you have created on Github are bare repositories and repository you have cloned on to your computer is a working directory for code development. TL;DR You can’t use bare Git repository for code development</p>
+<p>When your web application is ready to be deployed to cloud, Login to your server via SSH and create the following directories to work with.</p>
+<ul>
+<li>Login to server via SSH</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh &lt;user&gt;@&lt;vps&gt;
+</span></span></code></pre></div><p><em>Replace <code>&lt;user&gt;</code> with your ssh user id and <code>&lt;vps&gt;</code> with you server IP or fully qualified domain name (FQDN)</em></p>
+<ul>
+<li>Create a folder to manage our bare Git repositories</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mkdir /repository
+</span></span></code></pre></div><ul>
+<li>Change the permission of the directory to the logged in user</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chown -R <span style="color:#8be9fd;font-style:italic">$USER</span>:<span style="color:#8be9fd;font-style:italic">$USER</span> /repository
+</span></span></code></pre></div><ul>
+<li>Create a bare Git repository</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init --bare /repository/example.com.git
+</span></span></code></pre></div><p><em><strong>Note:</strong> Ensure you are not creating these directories in default Nginx or Apache web root directories. As it would expose entire repository to public, if directory index listings are enabled.</em></p>
+<h1 id="create-a-post-receive-hook">Create a Post-Receive hook</h1>
+<ul>
+<li>Create a file named post-receive in the following path and make it executable</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch /repository/example.com.git/hooks/post-receive
+</span></span><span style="display:flex;"><span>chmod +x /repository/example.com.git/hooks/post-receive
+</span></span></code></pre></div><ul>
+<li>Let us copy the below script and paste into post-receive hook file we created.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">WEB_DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/var/www/example.com&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">GIT_DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/repository/example.com.git&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">BRANCH</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;master&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> <span style="color:#8be9fd;font-style:italic">read</span> oldrev newrev ref
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># only check out the $BRANCH declared in the variable above</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$ref</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;refs/heads/</span><span style="color:#8be9fd;font-style:italic">$BRANCH</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Ref </span><span style="color:#8be9fd;font-style:italic">$ref</span><span style="color:#f1fa8c"> received, Deploying </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BRANCH</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> branch...&#34;</span>
+</span></span><span style="display:flex;"><span>        git --work-tree<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">$WEB_DIR</span> --git-dir<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">$GIT_DIR</span> checkout -f <span style="color:#8be9fd;font-style:italic">$BRANCH</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Ref </span><span style="color:#8be9fd;font-style:italic">$ref</span><span style="color:#f1fa8c"> received. Only the </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">BRANCH</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> branch may be deployed on this server.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">done</span>
+</span></span></code></pre></div><p>Post-Receive script is triggered when a user makes a successful push to master branch on this server. The script checks the branch which the Git head is pointing into. If it matches the branch defined in the variable <code>$BRANCH</code> (I.e, master), Then it checks out a latest copy to the <code>$WEB_DIR</code> directory.</p>
+<h1 id="add-a-new-remote-in-local-workspace">Add a new remote in Local Workspace</h1>
+<p>Let us log out from the server and <code>cd</code> into to the local workspace (website directory)</p>
+<p><em><strong>Warning:</strong> Don’t include any source code that contains private information that you do not want publish into the Git repository.</em></p>
+<ul>
+<li>Let us initialise a Git repository (skip this step if Git is initialised)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /home/username/projects/example.com <span style="color:#ff79c6">&amp;&amp;</span> git init
+</span></span></code></pre></div><ul>
+<li>Create a new remote that points to your Git repository the server</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add production &lt;user&gt;@&lt;server&gt;:/repository/example.com.git
+</span></span></code></pre></div><p><em><strong>Note:</strong> Replace <code>&lt;user&gt;</code> and <code>&lt;server&gt;</code> with your ssh username and server IP / FQDN</em></p>
+<h1 id="deploy-your-web-app">Deploy your Web App</h1>
+<ul>
+<li>We have done configuring our repository and development workspace to publish the site by running the command</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push production master
+</span></span></code></pre></div><p><em>Output</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Enumerating objects: 5, <span style="color:#ff79c6">done</span>.
+</span></span><span style="display:flex;"><span>Counting objects: 100% <span style="color:#ff79c6">(</span>5/5<span style="color:#ff79c6">)</span>, <span style="color:#ff79c6">done</span>.
+</span></span><span style="display:flex;"><span>Delta compression using up to <span style="color:#bd93f9">8</span> threads
+</span></span><span style="display:flex;"><span>Compressing objects: 100% <span style="color:#ff79c6">(</span>3/3<span style="color:#ff79c6">)</span>, <span style="color:#ff79c6">done</span>.
+</span></span><span style="display:flex;"><span>Writing objects: 100% <span style="color:#ff79c6">(</span>3/3<span style="color:#ff79c6">)</span>, <span style="color:#bd93f9">286</span> bytes | 286.00 KiB/s, <span style="color:#ff79c6">done</span>.
+</span></span><span style="display:flex;"><span>Total <span style="color:#bd93f9">3</span> <span style="color:#ff79c6">(</span>delta 2<span style="color:#ff79c6">)</span>, reused <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">(</span>delta 0<span style="color:#ff79c6">)</span>, pack-reused <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>remote: Ref refs/heads/master received. Deploying master branch...
+</span></span><span style="display:flex;"><span>remote: Already on <span style="color:#f1fa8c">&#39;master&#39;</span>
+</span></span><span style="display:flex;"><span>To &lt;vps&gt;:/repository/example.com.git
+</span></span><span style="display:flex;"><span>   b46d132..0141515  master -&gt; master
+</span></span></code></pre></div><p>Voila! You have successfully setup Git workflow to deploy websites on Git push. You should see you static website or app deployed to the Nginx Web Root directory If you have followed this tutorial.</p>
+
+      <h2 class="align-center lined-heading">Tags</h2>
+      <div class="hero-tags">
+        <a class="tag" href="https://bensonshaji.dev/tags/git/">GIT</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/deployment/">DEPLOYMENT</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/workflow/">WORKFLOW</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/cloud/">CLOUD</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/server/">SERVER</a>
+      </div>
+      
+      
+
+
+
+    </div>
+  </div>
+  </div>
+</main>
+
+  </main><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-center">
+                <span>© 2020 - 2024</span>
+                <span class="display-block"><a href="https://bensonshaji.dev/">Benson Shaji</a></span>
+            </div>
+        </div>
+    </div>
+</footer><div class="theme-switch"><i class="bi bi-brightness-high"></i></div>
+
+  
+  
+  
+  <script src="https://bensonshaji.dev/assets/js/bundle.min.js"></script>
+</body>
+
+</html>

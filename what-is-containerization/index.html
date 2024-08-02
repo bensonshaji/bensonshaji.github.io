@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>
+    
+    What Is Containerization?
+    
+  </title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.130.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Benson Shaji" />
+  
+  <meta name="description" content="">
+  
+  <link rel="canonical" href="https://bensonshaji.dev/what-is-containerization/" />
+  
+  
+  
+  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.468284e2eaa8e65d8e1ef62d82524e8753044f0cbb11857323dce42a167c654d.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://bensonshaji.dev/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bensonshaji.dev/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bensonshaji.dev/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://bensonshaji.dev/assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <meta property="og:url" content="https://bensonshaji.dev/what-is-containerization/">
+  <meta property="og:title" content="What Is Containerization?">
+  <meta property="og:description" content="Containerization is a process of packaging software application with its operating environment as a bundle through Virtualization. The containers running through virtualization are hardware agnostic and portable.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-31T21:20:50+05:30">
+    <meta property="article:modified_time" content="2022-07-31T21:20:50+05:30">
+    <meta property="article:tag" content="Virtualization">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Deployment">
+    <meta property="article:tag" content="Devops">
+    <meta property="og:image" content="https://bensonshaji.dev/what-is-containerization/venti-views-1cqIcrWFQBI-unsplash-cover.jpeg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bensonshaji.dev/what-is-containerization/venti-views-1cqIcrWFQBI-unsplash-cover.jpeg">
+  <meta name="twitter:title" content="What Is Containerization?">
+  <meta name="twitter:description" content="Containerization is a process of packaging software application with its operating environment as a bundle through Virtualization. The containers running through virtualization are hardware agnostic and portable.">
+
+  
+</head>
+
+<body data-theme="light">
+  <script>
+    if (localStorage.getItem("bensonshaji-data-theme") != null) {
+      document.getElementsByTagName("body")[0].setAttribute("data-theme", localStorage.getItem("bensonshaji-data-theme"))
+    }
+  </script><header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <nav>
+          <a href="https://bensonshaji.dev/">Home</a>
+          <a href="https://bensonshaji.dev/posts">Posts</a>
+          <a href="https://bensonshaji.dev/tags">Tags</a>
+        </nav>
+      </div>
+      <div class="col-md-4 align-center">
+        <a href="https://bensonshaji.dev/">
+          <div class="logo"></div>
+        </a>
+      </div>
+      <div class="col-md-4 align-right">
+        <nav>
+          <a href="https://bensonshaji.dev/sitemap.xml">Sitemap</a>
+          <a href="https://bensonshaji.dev/index.xml">RSS</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><main class="app-container">
+    
+<main class="hero-post">
+  <div class="container">
+    <div class="col-md-12">
+
+      <h1 class="hero-title">What Is Containerization?</h1>
+      <div class="hero-post-info">
+        <span class="date">Jul 31, 2022</span>
+        <span class="read-time">5 min read</span>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="hero-image">
+    <img src="https://bensonshaji.dev/what-is-containerization/venti-views-1cqIcrWFQBI-unsplash-cover_hu5f93e97ce169d310e2836e907c0a0f2b_1630640_900x450_fill_q75_box_center.jpeg"
+        srcset="https://bensonshaji.dev/what-is-containerization/venti-views-1cqIcrWFQBI-unsplash-cover_hu5f93e97ce169d310e2836e907c0a0f2b_1630640_900x450_fill_q75_box_center.jpeg 900w, https://bensonshaji.dev/what-is-containerization/venti-views-1cqIcrWFQBI-unsplash-cover_hu5f93e97ce169d310e2836e907c0a0f2b_1630640_1200x550_fill_q75_box_center.jpeg 1200w, https://bensonshaji.dev/what-is-containerization/venti-views-1cqIcrWFQBI-unsplash-cover_hu5f93e97ce169d310e2836e907c0a0f2b_1630640_1600x850_fill_q75_box_center.jpeg 1600w"
+        draggable="false" alt="">
+</picture>
+
+<h1 id="what-is-a-container">What is a Container?</h1>
+<p>A Container is a storage unit that holds your code and all its dependencies to run on a program quickly and reliably. It&rsquo;s a sand boxed environment which restricts the code in the container to talk to the process within that container (unless explicitly defined). These containers are hardware agnostic and runs identical in various environments regardless of the infrastructure.</p>
+<h1 id="how-is-this-possible">How is this possible?</h1>
+<p>Containerization is possible through a feature in Linux kernel called CGROUPS abbreviated for Control Groups. CGROUPS limits and isolates the resource usage of a collection of process (ex: CPU, RAM, Disk I/O, Networks etc.)</p>
+<p><strong>The three ways we can run applications are through:</strong></p>
+<ul>
+<li>Bare Metal</li>
+<li>Virtual Machine</li>
+<li>Container</li>
+</ul>
+<h2 id="bare-metal">Bare Metal</h2>
+<p>It is a traditional way of running softwares, where an application is tightly coupled to the operating system. Setting up this environment is as simple as:</p>
+<ul>
+<li>Setting up the operating system for development/production</li>
+<li>Install the technology stacks (NodeJS, Databases etc.,)</li>
+<li>Run your application on top of this stack.</li>
+</ul>
+<p>This is efficient in terms of resource usage and gives you excellent  performance. However, it is not scalable as it is tightly coupled to the operating system and hardware. Any major change to the operating system or hardware could break your application.</p>
+<h5 id="issues-that-we-face-in-this-type-of-environment">Issues that we face in this type of environment:</h5>
+<blockquote>
+<p>“My software works fine in my computer but it isn’t working in the QA / Production”</p>
+</blockquote>
+<p>That&rsquo;s because local development environment is different from production. If you develop on a MacOS (or Windows) and deploy the application to a Linux environment, the chances are that certain parts of the application may not behave the same as in your development environment. It’s due to the change in infrastructure, hardware and networking.</p>
+<blockquote>
+<p>“My server got hacked and I lost my data because of a vulnerability that allowed root access to the server”</p>
+</blockquote>
+<p>If your application gets hacked due a vulnerability in a third party package, hacker now has access to your server and can steal your data on the server or worst, he could purge all your data. This is a risk that no Business can afford.</p>
+<p>There are plenty of issues that a developer can run into using Bare Metal hardware for running applications. This isn’t a safer option if you are on production and running multiple application on a single host.</p>
+<h2 id="virtual-machine">Virtual Machine</h2>
+<p>Here, A virtual appliance is deployed on a hardware. A Virtual Appliance is a virtual machine image file that consists a pre-configured operating system with a software solution. This virtual machine image file could be transferred from one system to another. This reduces the deployment time and you can be sure that your software works as intended on different platforms. There are advantages to this type of deployment, but its disadvantages outweigh the advantages.</p>
+<p>System resource usage is one of the critical aspects of a server. Virtual Machine based applications are resource intensive due to the fact that there is a guest operating system that runs on top the primary operating system through Virtualization. If we have to run one more instance of this application, then we would end up having 3 operating systems running on a machine at the same time. I.e. Your main operating system runs two other operating systems to run two instances of an application. Your system resources usage could be full at this point. This isn’t efficient and cost effective.</p>
+<p>If budget is not a concern, then this type of environment is optimal, as you can run applications on separate virtual machines with isolation &amp; enhanced security.</p>
+<h2 id="container-based-applications">Container based Applications</h2>
+<p>A container is a user space that runs on top of Linux kernel. This confined user space is a sand boxed environment that can run different types of applications, databases or different operating system. They are similar to virtual machines but instead of running a new operating system with its own kernel they make use of existing Kernel and creates a user space to run applications. This can be called as operating system level virtualization. But unlike full virtualization using tools such as VMWare and Virtual Box, Containerization is resource friendly, scalable and out performs virtual machines. Docker is a well known example for Containerization software.</p>
+<p>Are you working on a NodeJS project with MongoDB? Spin up a container dedicated to NodeJS and MongoDB configuration. Is your project based on python and elastic search? Spin up a container and setup a python-based development environment with elastic search. I run multiple Linux operating systems such as CentOS, OpenSUSE, Kali, Debian and alpine… To test out different operating systems and build docker containers for my projects. This way you can ensure not to break your primary operating system during testing.</p>
+<p>Cool features such as taking snapshots, version control them and exporting them as a portable file so that you can restore it into a different system makes it a viable technology we can’t resist.</p>
+<p>Containers are secure by default if you run them as non-root user and enabling security features such as SE-Linux and App-Armour. Since containers are modular it is easier to scale them and or to replicate them for other projects. It has never been easier to use these techniques for software development.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>No technology is perfect and same goes for Containerization. The main draw backs with Containers are:</p>
+<ul>
+<li>They don’t run at Bare Metal speeds.</li>
+<li>Graphical application do not work well.</li>
+<li>Persistent storage is complicated</li>
+<li>Not supported for all software applications available in the market</li>
+</ul>
+<p>Yet this is one of the booming technology developers are excited for in the future.</p>
+
+      <h2 class="align-center lined-heading">Tags</h2>
+      <div class="hero-tags">
+        <a class="tag" href="https://bensonshaji.dev/tags/virtualization/">VIRTUALIZATION</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/docker/">DOCKER</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/deployment/">DEPLOYMENT</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/devops/">DEVOPS</a>
+      </div>
+      
+      
+
+
+
+    </div>
+  </div>
+  </div>
+</main>
+
+  </main><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-center">
+                <span>© 2020 - 2024</span>
+                <span class="display-block"><a href="https://bensonshaji.dev/">Benson Shaji</a></span>
+            </div>
+        </div>
+    </div>
+</footer><div class="theme-switch"><i class="bi bi-brightness-high"></i></div>
+
+  
+  
+  
+  <script src="https://bensonshaji.dev/assets/js/bundle.min.js"></script>
+</body>
+
+</html>

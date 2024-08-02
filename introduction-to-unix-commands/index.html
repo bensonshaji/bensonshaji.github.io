@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>
+    
+    Introduction To Unix Commands
+    
+  </title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.130.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Benson Shaji" />
+  
+  <meta name="description" content="">
+  
+  <link rel="canonical" href="https://bensonshaji.dev/introduction-to-unix-commands/" />
+  
+  
+  
+  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.468284e2eaa8e65d8e1ef62d82524e8753044f0cbb11857323dce42a167c654d.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://bensonshaji.dev/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bensonshaji.dev/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bensonshaji.dev/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://bensonshaji.dev/assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <meta property="og:url" content="https://bensonshaji.dev/introduction-to-unix-commands/">
+  <meta property="og:title" content="Introduction To Unix Commands">
+  <meta property="og:description" content="Commands were the only way of interacting with computers before GUI based operating systems were introduced. Now, everyone is pretty comfortable with trusty mouse to perform series of clicks and get things done. This is indeed intuitive and welcoming for beginners. However commands and terminals are preferred ways of doing things in software development.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-15T14:36:24+05:30">
+    <meta property="article:modified_time" content="2022-07-15T14:36:24+05:30">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Macos">
+    <meta property="article:tag" content="Introduction">
+    <meta property="article:tag" content="Terminal">
+    <meta property="article:tag" content="Commands">
+    <meta property="article:tag" content="Unix">
+    <meta property="og:image" content="https://bensonshaji.dev/introduction-to-unix-commands/gabriel-heinzer-4Mw7nkQDByk-unsplash-cover.jpeg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bensonshaji.dev/introduction-to-unix-commands/gabriel-heinzer-4Mw7nkQDByk-unsplash-cover.jpeg">
+  <meta name="twitter:title" content="Introduction To Unix Commands">
+  <meta name="twitter:description" content="Commands were the only way of interacting with computers before GUI based operating systems were introduced. Now, everyone is pretty comfortable with trusty mouse to perform series of clicks and get things done. This is indeed intuitive and welcoming for beginners. However commands and terminals are preferred ways of doing things in software development.">
+
+  
+</head>
+
+<body data-theme="light">
+  <script>
+    if (localStorage.getItem("bensonshaji-data-theme") != null) {
+      document.getElementsByTagName("body")[0].setAttribute("data-theme", localStorage.getItem("bensonshaji-data-theme"))
+    }
+  </script><header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <nav>
+          <a href="https://bensonshaji.dev/">Home</a>
+          <a href="https://bensonshaji.dev/posts">Posts</a>
+          <a href="https://bensonshaji.dev/tags">Tags</a>
+        </nav>
+      </div>
+      <div class="col-md-4 align-center">
+        <a href="https://bensonshaji.dev/">
+          <div class="logo"></div>
+        </a>
+      </div>
+      <div class="col-md-4 align-right">
+        <nav>
+          <a href="https://bensonshaji.dev/sitemap.xml">Sitemap</a>
+          <a href="https://bensonshaji.dev/index.xml">RSS</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><main class="app-container">
+    
+<main class="hero-post">
+  <div class="container">
+    <div class="col-md-12">
+
+      <h1 class="hero-title">Introduction To Unix Commands</h1>
+      <div class="hero-post-info">
+        <span class="date">Jul 15, 2022</span>
+        <span class="read-time">5 min read</span>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="hero-image">
+    <img src="https://bensonshaji.dev/introduction-to-unix-commands/gabriel-heinzer-4Mw7nkQDByk-unsplash-cover_hu0dc1abd5146846c9216777edc5d9c1c8_844071_900x450_fill_q75_box_center.jpeg"
+        srcset="https://bensonshaji.dev/introduction-to-unix-commands/gabriel-heinzer-4Mw7nkQDByk-unsplash-cover_hu0dc1abd5146846c9216777edc5d9c1c8_844071_900x450_fill_q75_box_center.jpeg 900w, https://bensonshaji.dev/introduction-to-unix-commands/gabriel-heinzer-4Mw7nkQDByk-unsplash-cover_hu0dc1abd5146846c9216777edc5d9c1c8_844071_1200x550_fill_q75_box_center.jpeg 1200w, https://bensonshaji.dev/introduction-to-unix-commands/gabriel-heinzer-4Mw7nkQDByk-unsplash-cover_hu0dc1abd5146846c9216777edc5d9c1c8_844071_1600x850_fill_q75_box_center.jpeg 1600w"
+        draggable="false" alt="">
+</picture>
+
+<p>Commands were the only way of interacting with computers before GUI based operating systems were introduced. Now, everyone is pretty comfortable with trusty mouse to perform series of clicks and get things done. This is indeed intuitive and welcoming for beginners. However commands and terminals are preferred ways of doing things in software development. Why you may ask? It’s easier to automate certain things such as building projects, deploying code, and monitoring servers via command executions in terminals.</p>
+<p>In reality commands via terminals could do a lot more than what we would be discussing in this post. I enjoy executing commands written in scripts, and when executed it automates my workflow with a single command.</p>
+<p>ex: <code>make prodBuild</code> is a command that I use in my Hugo Project which runs following actions in series of commands to publish a post to <a href="https://bensonshaji.dev/posts">https://bensonshaji.dev/posts</a>.</p>
+<ul>
+<li>Fetch all posts from my Headless CMS ready to be published.</li>
+<li>Generate Markdown files as content for Hugo.</li>
+<li>Build Hugo site with production configurations.</li>
+<li>Deploy the site to DigitalOcean Droplet via Rsync.</li>
+<li>Additionally cleanup any junk files remaining on remote and local.</li>
+</ul>
+<p>How cool is that! A single command automates multiple steps in series for easy deployments. I am pretty sure it would have taken at-least 6 separate commands and few GUI clicks to upload website files. I prefer the first option over the GUI method any day and it makes me feel like a hacker. What more do you want?</p>
+<blockquote>
+<p>Working in a Linux terminal is the goto way for any developer who wants to get things done quickly.</p>
+</blockquote>
+<p>In a series of post, We will be discussing the most commonly used Linux commands. Throughout this series I would be executing these commands on MacOS, However it should work on any Linux Distribution. Windows 10/11 users can download Ubuntu on WSL app from Microsoft store to learn along the way.</p>
+<h1 id="working-with-directories">Working with Directories</h1>
+<p>Every operating system has the ability to organise content via files and folders. I am sure you are aware of it and know how to use it with GUI. It’s easy to click your way through to get into any directory. However, In terminal you need to use a program called  <code>cd</code> meaning <em>change directory</em>.</p>
+<p>By default when you open terminal you will be in Home directory of the current user. In MacOS it is <code>/Users/&lt;username&gt;/</code>. For other *nix distributions you could check your current working directory by running command <code>pwd</code> meaning <em>print working directory</em>. Hurray! That’s your first command ran on a terminal. It prints the current working directory.</p>
+<p>Now let us run a few more commands with various options passed to the program.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ <span style="color:#8be9fd;font-style:italic">cd</span> Documents/
+</span></span></code></pre></div><blockquote>
+<p>Change current working directory to Documents.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ <span style="color:#8be9fd;font-style:italic">cd</span> Documents/Business/
+</span></span></code></pre></div><blockquote>
+<p>Change current working directory to a sub directory called Business inside Documents.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ <span style="color:#8be9fd;font-style:italic">cd</span> ..
+</span></span></code></pre></div><blockquote>
+<p>Go back by one directory from the current directory.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ <span style="color:#8be9fd;font-style:italic">cd</span> ../../
+</span></span></code></pre></div><blockquote>
+<p>Go back by two directories from the current directory. As you can see they can be chained multiple times with a forward slash.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ <span style="color:#8be9fd;font-style:italic">pwd</span>
+</span></span></code></pre></div><blockquote>
+<p>Prints the current working directory</p>
+</blockquote>
+<h1 id="listing-files-in-a-directory">Listing files in a Directory</h1>
+<p>Now that we have learnt how to navigate between directories, it is time to see how to list files in a folder. It is done by running a program <code>ls</code> meaning <em>list directory contents</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls
+</span></span></code></pre></div><blockquote>
+<p>Lists all files and folder in the current directory</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls -l
+</span></span></code></pre></div><blockquote>
+<p>Lists all files and folder in the current directory, along with other information such as permissions, size, date &amp; owner for each individual file.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls -al
+</span></span></code></pre></div><blockquote>
+<p>Same as the ‘-l’ command, but including ‘-a’ shows files or folder that are hidden. Hidden files and folders are prefixed to a dot <code>.</code>
+ex: ‘.zshrc’, This is the default configuration file for z-shell.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls -alh
+</span></span></code></pre></div><blockquote>
+<p>Same as the ‘-al’ command but including ‘-h’ shows all files size in human-readable format.
+ex: Instead of showing 3497 in size column it shows 3.4K, indicating the file is 3497 Bytes or 3.4 Kilo Bytes</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls /Users/&lt;username&gt;/Documents/Business/ 
+</span></span></code></pre></div><blockquote>
+<p>Here we are trying to list the contents of Business from our Home folder. Notice that you don’t need <code>cd</code> into the above path to see its contents.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls ~/Documents/Business/
+</span></span></code></pre></div><blockquote>
+<p>It is same as running the prev command. Here ‘~/‘ will be expanded to /Users/<!-- raw HTML omitted -->/ during execution. Output is same as the previous command.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls a*
+</span></span></code></pre></div><blockquote>
+<p>Lists all files and folders starting with the character ‘a’. This is our first example for pattern matching. It is supported by majority of the Linux commands that you would execute through out this series.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls a*e
+</span></span></code></pre></div><blockquote>
+<p>Lists all files beginning with letter ‘a’ and ending with letter ‘e’</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls *ama*
+</span></span></code></pre></div><blockquote>
+<p>Lists all files containing the text ‘ama’ anywhere in the filename.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls ????e
+</span></span></code></pre></div><blockquote>
+<p>Lists all files containing five characters in the file name that ends with the letter ‘e’</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ ls <span style="color:#ff79c6">[</span>a-g<span style="color:#ff79c6">]</span>*
+</span></span></code></pre></div><blockquote>
+<p>Lists all files whose names begin with characters ‘a’ through ‘g’</p>
+</blockquote>
+<h1 id="create-directories">Create directories</h1>
+<p>We now have learnt how to list files and folder in a directory, It’s time to create one in terminal. And it’s as simple as running the program ‘mkdir’ and passing a folder name to it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ mkdir Finance
+</span></span></code></pre></div><blockquote>
+<p>Creates a new folder with name Finance in the current working directory</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ mkdir -p Finance/Family/Personal
+</span></span></code></pre></div><blockquote>
+<p>Creates 2 sub-directories in Finance. Notice the use of ‘-p’ in the command to create intervening parent directories if they do not exist</p>
+</blockquote>
+<p>With these commands you should be able to navigate between directories, list contents of a directory and even create one from the terminal.</p>
+<p>In the upcoming post we will take a step further and work with files from the terminal.</p>
+
+      <h2 class="align-center lined-heading">Tags</h2>
+      <div class="hero-tags">
+        <a class="tag" href="https://bensonshaji.dev/tags/linux/">LINUX</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/macos/">MACOS</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/introduction/">INTRODUCTION</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/terminal/">TERMINAL</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/commands/">COMMANDS</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/unix/">UNIX</a>
+      </div>
+      
+      
+
+
+
+    </div>
+  </div>
+  </div>
+</main>
+
+  </main><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-center">
+                <span>© 2020 - 2024</span>
+                <span class="display-block"><a href="https://bensonshaji.dev/">Benson Shaji</a></span>
+            </div>
+        </div>
+    </div>
+</footer><div class="theme-switch"><i class="bi bi-brightness-high"></i></div>
+
+  
+  
+  
+  <script src="https://bensonshaji.dev/assets/js/bundle.min.js"></script>
+</body>
+
+</html>

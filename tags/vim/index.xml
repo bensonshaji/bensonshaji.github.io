@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on </title>
+    <link>https://bensonshaji.dev/tags/vim/</link>
+    <description>Recent content in Vim on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Aug 2022 22:04:03 +0530</lastBuildDate>
+    <atom:link href="https://bensonshaji.dev/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim Cheatsheet</title>
+      <link>https://bensonshaji.dev/vim-cheatsheet/</link>
+      <pubDate>Mon, 01 Aug 2022 22:04:03 +0530</pubDate>
+      <guid>https://bensonshaji.dev/vim-cheatsheet/</guid>
+      <description>Vim is a fantastic code editor and is a popular choice among hardcore developers. Its my favourite choice when it comes to making quick code changes in terminal. Vim has a huge learning curve with its long list commands to memorize. Here is a cheatsheet with my most used vim commands in my development process.</description>
+    </item>
+  </channel>
+</rss>

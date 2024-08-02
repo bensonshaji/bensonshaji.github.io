@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Benson Shaji - UX Consultant</title>
+    <link>https://bensonshaji.dev/</link>
+    <description>Recent content on Benson Shaji - UX Consultant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jun 2023 10:44:04 +0530</lastBuildDate><atom:link href="https://bensonshaji.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim Cheatsheet</title>
+      <link>https://bensonshaji.dev/vim-cheatsheet/</link>
+      <pubDate>Mon, 01 Aug 2022 22:04:03 +0530</pubDate>
+      
+      <guid>https://bensonshaji.dev/vim-cheatsheet/</guid>
+      <description>Vim is a fantastic code editor and is a popular choice among hardcore developers. Its my favourite choice when it comes to making quick code changes in terminal. Vim has a huge learning curve with its long list commands to memorize. Here is a cheatsheet with my most used vim commands in my development process.</description>
+    </item>
+    
+    <item>
+      <title>What Is Web 3.0?</title>
+      <link>https://bensonshaji.dev/what-is-web-3.0/</link>
+      <pubDate>Mon, 01 Aug 2022 00:27:00 +0530</pubDate>
+      
+      <guid>https://bensonshaji.dev/what-is-web-3.0/</guid>
+      <description>World Wide Web (WWW) is a collection of hyper text based websites distributed across the globe and connected to each other through hyperlinks. People misunderstand Web for Internet. Technically Web is a service operating over the Internet; similar to Email or VoIP (Voice over Internet Protocol)</description>
+    </item>
+    
+    <item>
+      <title>What Is Containerization?</title>
+      <link>https://bensonshaji.dev/what-is-containerization/</link>
+      <pubDate>Sun, 31 Jul 2022 21:20:50 +0530</pubDate>
+      
+      <guid>https://bensonshaji.dev/what-is-containerization/</guid>
+      <description>Containerization is a process of packaging software application with its operating environment as a bundle through Virtualization. The containers running through virtualization are hardware agnostic and portable.</description>
+    </item>
+    
+    <item>
+      <title>How To Set Up Git Workflow For Web Application Deployment</title>
+      <link>https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/</link>
+      <pubDate>Wed, 20 Jul 2022 12:56:06 +0530</pubDate>
+      
+      <guid>https://bensonshaji.dev/how-to-set-up-git-workflow-for-web-application-deployment/</guid>
+      <description>Git is popular tool among developers. It’s mainly used to track changes in code through out the development process. But there is a hidden feature in it called Git hooks, through which we can run scripts when a specific event is triggered in a Git repository. One of these events is called Post-Receive.</description>
+    </item>
+    
+    <item>
+      <title>How To Set Up Nginx Server Blocks (Virtual Hosts) On Ubuntu Server</title>
+      <link>https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/</link>
+      <pubDate>Mon, 18 Jul 2022 07:55:04 +0530</pubDate>
+      
+      <guid>https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/</guid>
+      <description>Server Blocks is the terminology used in Nginx. They are configuration files with &lt;code&gt;server { }&lt;/code&gt; encapsulation, Hence the name Server Blocks. It is similar to Virtual Hosts for people coming from Apache background. It is the Nginx way of configuring several websites within a single instance of Nginx installation.</description>
+    </item>
+    
+    <item>
+      <title>Introduction To Unix Commands</title>
+      <link>https://bensonshaji.dev/introduction-to-unix-commands/</link>
+      <pubDate>Fri, 15 Jul 2022 14:36:24 +0530</pubDate>
+      
+      <guid>https://bensonshaji.dev/introduction-to-unix-commands/</guid>
+      <description>Commands were the only way of interacting with computers before GUI based operating systems were introduced. Now, everyone is pretty comfortable with trusty mouse to perform series of clicks and get things done. This is indeed intuitive and welcoming for beginners. However commands and terminals are preferred ways of doing things in software development.</description>
+    </item>
+    
+    <item>
+      <title>How Does Writing By Hand Improves Your Cognitive Skills</title>
+      <link>https://bensonshaji.dev/how-does-writing-by-hand-improves-your-cognitive-skills/</link>
+      <pubDate>Fri, 15 Jul 2022 10:17:31 +0530</pubDate>
+      
+      <guid>https://bensonshaji.dev/how-does-writing-by-hand-improves-your-cognitive-skills/</guid>
+      <description>With the development of technology, we are saying &lt;strong&gt;sayonara&lt;/strong&gt; to our trusty old pen and paper. This topic is controversial in many schools and colleges regarding the use of laptops in classrooms for note taking. Many professors consider laptop and internet are a distraction and contributes to students being less attentive and shows lack of interest during lectures.</description>
+    </item>
+    
+  </channel>
+</rss>

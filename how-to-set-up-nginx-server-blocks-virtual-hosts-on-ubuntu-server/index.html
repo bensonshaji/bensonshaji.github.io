@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>
+    
+    How To Set Up Nginx Server Blocks (Virtual Hosts) On Ubuntu Server
+    
+  </title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.130.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Benson Shaji" />
+  
+  <meta name="description" content="">
+  
+  <link rel="canonical" href="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/" />
+  
+  
+  
+  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.468284e2eaa8e65d8e1ef62d82524e8753044f0cbb11857323dce42a167c654d.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://bensonshaji.dev/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bensonshaji.dev/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bensonshaji.dev/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://bensonshaji.dev/assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <meta property="og:url" content="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/">
+  <meta property="og:title" content="How To Set Up Nginx Server Blocks (Virtual Hosts) On Ubuntu Server">
+  <meta property="og:description" content="Server Blocks is the terminology used in Nginx. They are configuration files with server { } encapsulation, Hence the name Server Blocks. It is similar to Virtual Hosts for people coming from Apache background. It is the Nginx way of configuring several websites within a single instance of Nginx installation.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-07-18T07:55:04+05:30">
+    <meta property="article:modified_time" content="2022-07-18T07:55:04+05:30">
+    <meta property="article:tag" content="Nginx">
+    <meta property="article:tag" content="Server">
+    <meta property="article:tag" content="Virtual-Host">
+    <meta property="article:tag" content="Server-Block">
+    <meta property="article:tag" content="Ubuntu">
+    <meta property="og:image" content="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/taylor-vick-M5tzZtFCOfs-unsplash-cover.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/taylor-vick-M5tzZtFCOfs-unsplash-cover.png">
+  <meta name="twitter:title" content="How To Set Up Nginx Server Blocks (Virtual Hosts) On Ubuntu Server">
+  <meta name="twitter:description" content="Server Blocks is the terminology used in Nginx. They are configuration files with server { } encapsulation, Hence the name Server Blocks. It is similar to Virtual Hosts for people coming from Apache background. It is the Nginx way of configuring several websites within a single instance of Nginx installation.">
+
+  
+</head>
+
+<body data-theme="light">
+  <script>
+    if (localStorage.getItem("bensonshaji-data-theme") != null) {
+      document.getElementsByTagName("body")[0].setAttribute("data-theme", localStorage.getItem("bensonshaji-data-theme"))
+    }
+  </script><header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <nav>
+          <a href="https://bensonshaji.dev/">Home</a>
+          <a href="https://bensonshaji.dev/posts">Posts</a>
+          <a href="https://bensonshaji.dev/tags">Tags</a>
+        </nav>
+      </div>
+      <div class="col-md-4 align-center">
+        <a href="https://bensonshaji.dev/">
+          <div class="logo"></div>
+        </a>
+      </div>
+      <div class="col-md-4 align-right">
+        <nav>
+          <a href="https://bensonshaji.dev/sitemap.xml">Sitemap</a>
+          <a href="https://bensonshaji.dev/index.xml">RSS</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><main class="app-container">
+    
+<main class="hero-post">
+  <div class="container">
+    <div class="col-md-12">
+
+      <h1 class="hero-title">How To Set Up Nginx Server Blocks (Virtual Hosts) On Ubuntu Server</h1>
+      <div class="hero-post-info">
+        <span class="date">Jul 18, 2022</span>
+        <span class="read-time">3 min read</span>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="hero-image">
+    <img src="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/taylor-vick-M5tzZtFCOfs-unsplash-cover_hub9f78f9a4546caab31e4060863b5f108_2821340_900x450_fill_box_center_3.png"
+        srcset="https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/taylor-vick-M5tzZtFCOfs-unsplash-cover_hub9f78f9a4546caab31e4060863b5f108_2821340_900x450_fill_box_center_3.png 900w, https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/taylor-vick-M5tzZtFCOfs-unsplash-cover_hub9f78f9a4546caab31e4060863b5f108_2821340_1200x550_fill_box_center_3.png 1200w, https://bensonshaji.dev/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-server/taylor-vick-M5tzZtFCOfs-unsplash-cover_hub9f78f9a4546caab31e4060863b5f108_2821340_1600x850_fill_box_center_3.png 1600w"
+        draggable="false" alt="">
+</picture>
+
+<h1 id="introduction">Introduction</h1>
+<p>Server Blocks is the terminology used in Nginx. They are configuration files with <code>server { }</code> encapsulation, Hence the name Server Blocks. It is similar to Virtual Hosts for people coming from Apache background. It is the Nginx way of configuring several websites within a single instance of Nginx installation.</p>
+<p>There are two prerequisites you need to consider before proceeding</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li>Ubuntu Server 20.04+.</li>
+<li>Secure shell access to your server with super user (sudo) permission.</li>
+<li>(optional) Need to have purchased a Domain name &amp; VPS</li>
+<li>(optional) You Domain’s NameServer should be pointing to VPS service provider (ex: DigitalOcean, AWS, Linode…)</li>
+</ul>
+<h1 id="step-1-install-nginx">Step 1: Install Nginx</h1>
+<p>Nginx is available in Ubuntu package repository and can be installed by running</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install nginx
+</span></span></code></pre></div><p>You can verify the status of Nginx server by running</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service nginx status
+</span></span></code></pre></div><p>If the status is inactive then you may start Nginx server by running</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service nginx start
+</span></span></code></pre></div><p>Once the Nginx server has started you may visit <a href="http://example.com">http://example.com</a> and be greeted with <strong>Welcome to nginx!</strong> webpage.</p>
+<h1 id="step-2-understanding-nginx-directory-structure">Step 2: Understanding Nginx directory structure</h1>
+<p>Nginx has predefined directories for us to work with. Change your working directory to <code>/etc/nginx/sites-available</code>. This is where all server block files exists in our server. When you <code>ls</code> in this directory, We see a file named default in this directory. This is the default configuration file generated by Nginx during installation. If you read the contents of this file you may see a directive root with value <code>/var/www/html</code>. This is our document root directory which Nginx has configured it for us. But we will be creating separate directories for each server block, As it enhances our website organisation and ease of use when dealing with several websites.</p>
+<h1 id="step-3-create-server-block-virtual-host">Step 3: Create Server Block (Virtual Host)</h1>
+<p>Let us create a file and name it ‘example.com’ in the following location <code>/etc/nginx/sites-available</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo touch /etc/nginx/sites-available/example.com
+</span></span></code></pre></div><p>Use a text editor of choice <code>vim</code> or <code>nano</code> to edit the file we created. I would be using ‘vim’ as my choice of editor through out this tutorial.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim /etc/nginx/sites-available/example.com
+</span></span></code></pre></div><p>Copy paste the below code for server block configuration.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#ff79c6">server</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">80</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">listen</span> <span style="color:#f1fa8c">[::]:80</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">example.com</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">root</span> <span style="color:#f1fa8c">/var/www/example.com</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">index</span> <span style="color:#f1fa8c">index.html</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">location</span> <span style="color:#f1fa8c">/</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">try_files</span> <span style="color:#8be9fd;font-style:italic">$uri</span> <span style="color:#8be9fd;font-style:italic">$uri/</span> =<span style="color:#bd93f9">404</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Server directive <code>server { }</code> encapsulates the configuration needed for a Server Block. Where, root is the default directory used to serve web pages and ‘index.html’ is the default file to be served when the domain url gets a HTTP GET request. The default location ‘/‘ is the entry point of the website which in our case is root directory. If a URL request fails, Nginx will look for a file named 404.html in the root directory.</p>
+<h1 id="step-4-create-document-root-directory">Step 4: Create Document Root Directory</h1>
+<p>Let’s create the document root directory for our server block and populate ’index.html’ with the html content given below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mkdir /var/www/example.com
+</span></span><span style="display:flex;"><span>sudo touch /var/www/example.com/index.html
+</span></span></code></pre></div><p>Copy paste the below html code into <code>/var/www/example.com/index.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">title</span>&gt;Welcome&lt;/<span style="color:#ff79c6">title</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">h1</span>&gt;Welcome to Nginx&lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></div><p>There is one step pending, I.e., to enable the server block. Nginx by default looks for configuration files in ‘sites-enabled’ directory to start the server. We create a symbolic link from <code>/etc/nginx/sites-available/example.com</code> to <code>/etc/nginx/sites-enabled/example.com</code> to enable our server block.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com
+</span></span></code></pre></div><p>Let us restart the Nginx server to load the configurations we created.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service nginx restart
+</span></span></code></pre></div><h1 id="find-your-ip-address">Find your IP address</h1>
+<p>With this your website can be accessed on example.com or the IP address of your server.</p>
+<p>You can find IP address of your server by running</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ip addr | grep inet
+</span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Additional domains could be enabled by creating server block files for each domain in <code>/etc/nginx/sites-available/</code> directory. Ensure you have directories created for them in <code>/var/www/</code></p>
+
+      <h2 class="align-center lined-heading">Tags</h2>
+      <div class="hero-tags">
+        <a class="tag" href="https://bensonshaji.dev/tags/nginx/">NGINX</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/server/">SERVER</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/virtual-host/">VIRTUAL HOST</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/server-block/">SERVER BLOCK</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/ubuntu/">UBUNTU</a>
+      </div>
+      
+      
+
+
+
+    </div>
+  </div>
+  </div>
+</main>
+
+  </main><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-center">
+                <span>© 2020 - 2024</span>
+                <span class="display-block"><a href="https://bensonshaji.dev/">Benson Shaji</a></span>
+            </div>
+        </div>
+    </div>
+</footer><div class="theme-switch"><i class="bi bi-brightness-high"></i></div>
+
+  
+  
+  
+  <script src="https://bensonshaji.dev/assets/js/bundle.min.js"></script>
+</body>
+
+</html>

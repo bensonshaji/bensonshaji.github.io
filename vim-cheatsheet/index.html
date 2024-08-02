@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>
+    
+    Vim Cheatsheet
+    
+  </title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.130.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Benson Shaji" />
+  
+  <meta name="description" content="">
+  
+  <link rel="canonical" href="https://bensonshaji.dev/vim-cheatsheet/" />
+  
+  
+  
+  <link rel="stylesheet" href="https://bensonshaji.dev/assets/css/bundle.468284e2eaa8e65d8e1ef62d82524e8753044f0cbb11857323dce42a167c654d.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://bensonshaji.dev/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://bensonshaji.dev/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://bensonshaji.dev/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://bensonshaji.dev/assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <meta property="og:url" content="https://bensonshaji.dev/vim-cheatsheet/">
+  <meta property="og:title" content="Vim Cheatsheet">
+  <meta property="og:description" content="Vim is a fantastic code editor and is a popular choice among hardcore developers. Its my favourite choice when it comes to making quick code changes in terminal. Vim has a huge learning curve with its long list commands to memorize. Here is a cheatsheet with my most used vim commands in my development process.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-08-01T22:04:03+05:30">
+    <meta property="article:modified_time" content="2022-08-01T22:04:03+05:30">
+    <meta property="article:tag" content="Vim">
+    <meta property="article:tag" content="Cheatsheet">
+    <meta property="article:tag" content="Programming">
+    <meta property="og:image" content="https://bensonshaji.dev/vim-cheatsheet/florian-krumm-1osIUArK5oA-unsplash-cover.jpeg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bensonshaji.dev/vim-cheatsheet/florian-krumm-1osIUArK5oA-unsplash-cover.jpeg">
+  <meta name="twitter:title" content="Vim Cheatsheet">
+  <meta name="twitter:description" content="Vim is a fantastic code editor and is a popular choice among hardcore developers. Its my favourite choice when it comes to making quick code changes in terminal. Vim has a huge learning curve with its long list commands to memorize. Here is a cheatsheet with my most used vim commands in my development process.">
+
+  
+</head>
+
+<body data-theme="light">
+  <script>
+    if (localStorage.getItem("bensonshaji-data-theme") != null) {
+      document.getElementsByTagName("body")[0].setAttribute("data-theme", localStorage.getItem("bensonshaji-data-theme"))
+    }
+  </script><header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <nav>
+          <a href="https://bensonshaji.dev/">Home</a>
+          <a href="https://bensonshaji.dev/posts">Posts</a>
+          <a href="https://bensonshaji.dev/tags">Tags</a>
+        </nav>
+      </div>
+      <div class="col-md-4 align-center">
+        <a href="https://bensonshaji.dev/">
+          <div class="logo"></div>
+        </a>
+      </div>
+      <div class="col-md-4 align-right">
+        <nav>
+          <a href="https://bensonshaji.dev/sitemap.xml">Sitemap</a>
+          <a href="https://bensonshaji.dev/index.xml">RSS</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><main class="app-container">
+    
+<main class="hero-post">
+  <div class="container">
+    <div class="col-md-12">
+
+      <h1 class="hero-title">Vim Cheatsheet</h1>
+      <div class="hero-post-info">
+        <span class="date">Aug 1, 2022</span>
+        <span class="read-time">5 min read</span>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="hero-image">
+    <img src="https://bensonshaji.dev/vim-cheatsheet/florian-krumm-1osIUArK5oA-unsplash-cover_hu312373d85f99967265524cd572356603_3238664_900x450_fill_q75_box_center.jpeg"
+        srcset="https://bensonshaji.dev/vim-cheatsheet/florian-krumm-1osIUArK5oA-unsplash-cover_hu312373d85f99967265524cd572356603_3238664_900x450_fill_q75_box_center.jpeg 900w, https://bensonshaji.dev/vim-cheatsheet/florian-krumm-1osIUArK5oA-unsplash-cover_hu312373d85f99967265524cd572356603_3238664_1200x550_fill_q75_box_center.jpeg 1200w, https://bensonshaji.dev/vim-cheatsheet/florian-krumm-1osIUArK5oA-unsplash-cover_hu312373d85f99967265524cd572356603_3238664_1600x850_fill_q75_box_center.jpeg 1600w"
+        draggable="false" alt="">
+</picture>
+
+<p>Vim is a fantastic code editor and is a popular choice among hardcore developers. Its my favourite choice when it comes to making quick code changes in terminal. Vim has a huge learning curve with its long list commands to memorize. Here is a cheatsheet with my most used vim commands in my development process.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; SAVE &amp; EXITS</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :qa               <span style="color:#6272a4">&#34; close all files</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :qa!              <span style="color:#6272a4">&#34; close all files, ignore changes</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :w                <span style="color:#6272a4">&#34; write changes to file</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :wq               <span style="color:#6272a4">&#34; write changes to file and quit</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :x 
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :q                <span style="color:#6272a4">&#34; close file</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :q!               <span style="color:#6272a4">&#34; close file, ignore if any changes</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; ZZ                <span style="color:#6272a4">&#34; save and quit from vim</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; NAVIGATION - PAGE SCROLL</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; C -&gt; Ctrl Key</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; h                 <span style="color:#6272a4">&#34; left arrow key</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; j                 <span style="color:#6272a4">&#34; down arrow key</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; k                 <span style="color:#6272a4">&#34; up arrow key</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; l                 <span style="color:#6272a4">&#34; right arrow key</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;C-u&gt;             <span style="color:#6272a4">&#34; half page up</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;C-d&gt;             <span style="color:#6272a4">&#34; half page down</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;C-b&gt;             <span style="color:#6272a4">&#34; page up</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;C-f&gt;             <span style="color:#6272a4">&#34; page down</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; NAVIGATION - WORD NAVIGATION</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; w                 <span style="color:#6272a4">&#34; move cursor word by word in forward direction</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; b                 <span style="color:#6272a4">&#34; move cursor word by word in backward direction</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; e                 <span style="color:#6272a4">&#34; move cursor word by word in forward direction + cursor will be at the end of the word</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; ge                <span style="color:#6272a4">&#34; move cursor word by word in  backward direction + cursor will be at the end of the word</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; NAVIGATION - LINE NAVIGATION</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; <span style="color:#bd93f9">0</span>                 <span style="color:#6272a4">&#34; move cursor to the start of the line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; ^                 <span style="color:#6272a4">&#34; move cursor to the start of the line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; $                 <span style="color:#6272a4">&#34; move cursor to the end of the line</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; NAVIGATION - CHARACTER NAVIGATION</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; fc                <span style="color:#6272a4">&#34; go forward to character c</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; Fc                <span style="color:#6272a4">&#34; go backward to character c</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; NAVIGATION - DOCUMENT NAVIGATION</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; gg                <span style="color:#6272a4">&#34; go to first line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; G                 <span style="color:#6272a4">&#34; go to last line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; nG                <span style="color:#6272a4">&#34; go to line n without entering command</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :<span style="color:#bd93f9">10</span>               <span style="color:#6272a4">&#34; go to line 10</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; NAVIGATION - WINDOW NAVIGATION</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; zz                <span style="color:#6272a4">&#34; center align the page  with respect to the position of the cursor</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; zt                <span style="color:#6272a4">&#34; top align the page with respect to the position of the cursor</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; zb                <span style="color:#6272a4">&#34; bottom align the page with respect to the position of the cursor</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; H                 <span style="color:#6272a4">&#34; move to top of the screen</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; M                 <span style="color:#6272a4">&#34; move to middle of the screen</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; L                 <span style="color:#6272a4">&#34; move to bottom of the screen</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; SEARCH</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; /key              <span style="color:#6272a4">&#34; enter keyword to search in the current page</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; n                 <span style="color:#6272a4">&#34; next matching search pattern</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; N                 <span style="color:#6272a4">&#34; previous matching  search pattern</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; *                 <span style="color:#6272a4">&#34; next whole word under cursor</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; #                 <span style="color:#6272a4">&#34; previous whole word under cursor</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; TAB PAGES</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tabedit          <span style="color:#6272a4">&#34; edit a file in new tab</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tabfind          <span style="color:#6272a4">&#34; open file in new tab if it exists in the current directory recursively</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tabclose         <span style="color:#6272a4">&#34; close current tab</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tabs             <span style="color:#6272a4">&#34; list all tabs</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tabfirst         <span style="color:#6272a4">&#34; go to first tab</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tablast          <span style="color:#6272a4">&#34; go to last tab</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tabn             <span style="color:#6272a4">&#34; go to next tab</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :tabp             <span style="color:#6272a4">&#34; go to previous tab</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; EXIT INSERT MODE</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;C-c&gt;             <span style="color:#6272a4">&#34; exit insert mode and abort current command</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt;                   <span style="color:#6272a4">&#34; exit insert mode</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; VISUAL MODE</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; v                 <span style="color:#6272a4">&#34; enter visual mode</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; V                 <span style="color:#6272a4">&#34; enter visual line mode</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; d                 <span style="color:#6272a4">&#34; delete selection</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; x
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; S                 <span style="color:#6272a4">&#34; replace selection</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; y                 <span style="color:#6272a4">&#34; yank selection</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; EDITING</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; a                 <span style="color:#6272a4">&#34; append</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; A                 <span style="color:#6272a4">&#34; append from end of the line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; i                 <span style="color:#6272a4">&#34; insert mode</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; o                 <span style="color:#6272a4">&#34; next line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; O                 <span style="color:#6272a4">&#34; previous line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; s                 <span style="color:#6272a4">&#34; delete character and insert</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; S                 <span style="color:#6272a4">&#34; delete line and insert</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; C                 <span style="color:#6272a4">&#34; delete until end of the line and insert</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; r                 <span style="color:#6272a4">&#34; replace one character</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; R                 <span style="color:#6272a4">&#34; enter replace mode</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; u                 <span style="color:#6272a4">&#34; undo changes</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;C-r&gt;             <span style="color:#6272a4">&#34; redo changes</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; c                 <span style="color:#6272a4">&#34; change (delete then insert)</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &gt;&gt;                <span style="color:#6272a4">&#34; indent right</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;&lt;                <span style="color:#6272a4">&#34; indent left</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; ==                <span style="color:#6272a4">&#34; auto indent</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; g~                <span style="color:#6272a4">&#34; swap case</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; gU                <span style="color:#6272a4">&#34; upper case</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; gu                <span style="color:#6272a4">&#34; lower case</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; dw                <span style="color:#6272a4">&#34; delete word in forward direction</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; db                <span style="color:#6272a4">&#34; delete word in backward direction</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; <span style="color:#bd93f9">2</span>dd               <span style="color:#6272a4">&#34; delete 2 lines</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; COPY and PASTE</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; x                 <span style="color:#6272a4">&#34; delete character</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; dd                <span style="color:#6272a4">&#34; cut line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; yy                <span style="color:#6272a4">&#34; copy line (yank)</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; p                 <span style="color:#6272a4">&#34; paste after</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; P                 <span style="color:#6272a4">&#34; paste before</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; vip               <span style="color:#6272a4">&#34; select paragraph</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; vipipip           <span style="color:#6272a4">&#34; increment paragraph selection</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; yip               <span style="color:#6272a4">&#34; yank paragraph</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; yap               <span style="color:#6272a4">&#34; yank paragraph including new line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; dip               <span style="color:#6272a4">&#34; delete paragraph</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; dap               <span style="color:#6272a4">&#34; delete paragraph including new line</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; SPELL CHECK</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; ]s                <span style="color:#6272a4">&#34; move to next misspelled word</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; [s                <span style="color:#6272a4">&#34; move to previous misspelled word</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; z=                <span style="color:#6272a4">&#34; suggest spelling for the word</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; zg                <span style="color:#6272a4">&#34; add word to spell list</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; zw                <span style="color:#6272a4">&#34; mark word as bad / misspelling</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; BULK EDIT</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; &lt;C-v&gt;             <span style="color:#6272a4">&#34; Ctrl+v to start visual selection and then use arrow keys for multi-line selection</span>
+</span></span><span style="display:flex;"><span>      &lt;Shift&gt; I         <span style="color:#6272a4">&#34; insert your text and hit escape, wait for other lines to update</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">                        
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                        &#34; FIND AND REPLACE TEXT</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :%s<span style="color:#f1fa8c">/a/</span>A/g         <span style="color:#6272a4">&#34; find and replace a with A in the entire file</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :s<span style="color:#f1fa8c">/a/</span>A/           <span style="color:#6272a4">&#34; find and replace a with A for only the first occurrences</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :s<span style="color:#f1fa8c">/a/</span>A/g          <span style="color:#6272a4">&#34; find and replace a with A for all occurrences in the current line</span>
+</span></span><span style="display:flex;"><span>&lt;Esc&gt; :%s<span style="color:#f1fa8c">/a/</span>A/gc        <span style="color:#6272a4">&#34; find and replace a with A in the entire file after confirming for each substitution</span>
+</span></span></code></pre></div>
+      <h2 class="align-center lined-heading">Tags</h2>
+      <div class="hero-tags">
+        <a class="tag" href="https://bensonshaji.dev/tags/vim/">VIM</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/cheatsheet/">CHEATSHEET</a>
+        <a class="tag" href="https://bensonshaji.dev/tags/programming/">PROGRAMMING</a>
+      </div>
+      
+      
+
+
+
+    </div>
+  </div>
+  </div>
+</main>
+
+  </main><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-center">
+                <span>© 2020 - 2024</span>
+                <span class="display-block"><a href="https://bensonshaji.dev/">Benson Shaji</a></span>
+            </div>
+        </div>
+    </div>
+</footer><div class="theme-switch"><i class="bi bi-brightness-high"></i></div>
+
+  
+  
+  
+  <script src="https://bensonshaji.dev/assets/js/bundle.min.js"></script>
+</body>
+
+</html>

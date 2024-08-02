@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptocurrency on </title>
+    <link>https://bensonshaji.dev/tags/cryptocurrency/</link>
+    <description>Recent content in Cryptocurrency on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Aug 2022 00:27:00 +0530</lastBuildDate>
+    <atom:link href="https://bensonshaji.dev/tags/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Web 3.0?</title>
+      <link>https://bensonshaji.dev/what-is-web-3.0/</link>
+      <pubDate>Mon, 01 Aug 2022 00:27:00 +0530</pubDate>
+      <guid>https://bensonshaji.dev/what-is-web-3.0/</guid>
+      <description>World Wide Web (WWW) is a collection of hyper text based websites distributed across the globe and connected to each other through hyperlinks. People misunderstand Web for Internet. Technically Web is a service operating over the Internet; similar to Email or VoIP (Voice over Internet Protocol)</description>
+    </item>
+  </channel>
+</rss>

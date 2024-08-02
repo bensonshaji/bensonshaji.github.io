@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unix on </title>
+    <link>https://bensonshaji.dev/tags/unix/</link>
+    <description>Recent content in Unix on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Jul 2022 14:36:24 +0530</lastBuildDate>
+    <atom:link href="https://bensonshaji.dev/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction To Unix Commands</title>
+      <link>https://bensonshaji.dev/introduction-to-unix-commands/</link>
+      <pubDate>Fri, 15 Jul 2022 14:36:24 +0530</pubDate>
+      <guid>https://bensonshaji.dev/introduction-to-unix-commands/</guid>
+      <description>Commands were the only way of interacting with computers before GUI based operating systems were introduced. Now, everyone is pretty comfortable with trusty mouse to perform series of clicks and get things done. This is indeed intuitive and welcoming for beginners. However commands and terminals are preferred ways of doing things in software development.</description>
+    </item>
+  </channel>
+</rss>
