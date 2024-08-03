@@ -6,8 +6,15 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Aug 2022 22:04:03 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2024 22:26:11 +0530</lastBuildDate>
     <atom:link href="https://bensonshaji.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Best Practices: Essential Tips for Writing Clean and Maintainable Code</title>
+      <link>https://bensonshaji.dev/css-best-practices-essential-tips-for-writing-clean-and-maintainable-code/</link>
+      <pubDate>Fri, 02 Aug 2024 22:26:11 +0530</pubDate>
+      <guid>https://bensonshaji.dev/css-best-practices-essential-tips-for-writing-clean-and-maintainable-code/</guid>
+      <description>Cascading style sheets (CSS) is a powerful language for creating visually appealing and responsive websites. Writing clean and maintainable CSS code is crucial for efficient development, collaboration and long-term maintenance of web projects. In this post, we will explore essential CSS best practices that I have learnt through out my career.</description>
+    </item>
     <item>
       <title>Vim Cheatsheet</title>
       <link>https://bensonshaji.dev/vim-cheatsheet/</link>

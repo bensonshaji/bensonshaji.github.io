@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on </title>
+    <link>https://bensonshaji.dev/tags/css/</link>
+    <description>Recent content in CSS on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Aug 2024 22:26:11 +0530</lastBuildDate>
+    <atom:link href="https://bensonshaji.dev/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Best Practices: Essential Tips for Writing Clean and Maintainable Code</title>
+      <link>https://bensonshaji.dev/css-best-practices-essential-tips-for-writing-clean-and-maintainable-code/</link>
+      <pubDate>Fri, 02 Aug 2024 22:26:11 +0530</pubDate>
+      <guid>https://bensonshaji.dev/css-best-practices-essential-tips-for-writing-clean-and-maintainable-code/</guid>
+      <description>Cascading style sheets (CSS) is a powerful language for creating visually appealing and responsive websites. Writing clean and maintainable CSS code is crucial for efficient development, collaboration and long-term maintenance of web projects. In this post, we will explore essential CSS best practices that I have learnt through out my career.</description>
+    </item>
+  </channel>
+</rss>
